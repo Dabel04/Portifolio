@@ -3,255 +3,438 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dabelchi Peter Iyiegbu | Software Engineer</title>
-
+  <title>Dabelchi Peter Iyiegbu | Junior Full Stack Developer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/project.css">
+  <style>
+    /* Single Page Specific Styles */
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      /* Prevents the sticky header from covering section titles when scrolling */
+      scroll-margin-top: 80px; 
+    }
+    .tech-tag {
+        display: inline-block;
+        background-color: #222;
+        color: var(--primary-color);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 4px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+    }
+    .contact-card { background-color: #111; border: 1px solid #333; border-radius: 20px; padding: 40px; }
+    .contact-info-item { display: flex; align-items: center; margin-bottom: 25px; font-size: 1.1rem; }
+    .contact-info-item i { color: var(--primary-color); font-size: 1.5rem; width: 40px; }
+    .form-group { margin-bottom: 20px; text-align: left; }
+    .form-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; color: #ccc; }
+    .form-group input, .form-group textarea { width: 100%; padding: 15px; background-color: #000; border: 1px solid #333; border-radius: 10px; color: white; font-family: inherit; transition: all 0.3s ease; }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(130, 255, 31, 0.2); }
+    .error-text { display: block; color: #ff4d4d; font-size: 0.8rem; font-weight: 600; margin-top: 5px; min-height: 18px; }
+    .input-error { border-color: #ff4d4d !important; background-color: rgba(255, 77, 77, 0.05) !important; }
+  </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <header class="bg-black sticky-top">
   <nav class="navbar navbar-expand-md container py-3">
-    <a class="navbar-brand m-0 text-white" href="index.html" style="font-size: 1.5rem; font-weight: 800;">
+    <a class="navbar-brand m-0 text-white" href="#home" style="font-size: 1.5rem; font-weight: 800;">
       DABELCHI<span style="color: var(--primary-color);">.</span>
     </a>
-    
-    <button class="navbar-toggler border-0 shadow-none text-white fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation" style="padding: 0;">
+    <button class="navbar-toggler border-0 shadow-none text-white fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation" style="padding: 0;" id="mobileMenuBtn">
       <i class="fa fa-bars"></i>
     </button>
-
     <div class="collapse navbar-collapse justify-content-end" id="mobileNav">
-      <div class="navbar-nav align-items-center gap-3 mt-4 mt-md-0 pb-3 pb-md-0 text-center text-md-start">
-        <a class="nav-link" href="index.html" style="color: var(--primary-color);">Home</a>
-        <a class="nav-link text-white" href="about.html">About</a>
-        <a class="nav-link text-white" href="project.html">Projects</a>
-        <a class="nav-link text-white" href="register.html">Services</a>
-        <a class="nav-link mt-2 mt-md-0" href="contact.html" id="contact" style="color: white;">Contact Me</a>
+      <div class="navbar-nav align-items-center gap-3 mt-4 mt-md-0 pb-3 pb-md-0 text-center text-md-start" id="navLinks">
+        <a class="nav-link text-white" href="#home">Home</a>
+        <a class="nav-link text-white" href="#about">About</a>
+        <a class="nav-link text-white" href="#skills">Skills</a>
+        <a class="nav-link text-white" href="#projects">Projects</a>
+        <a class="nav-link mt-2 mt-md-0" href="#contact" id="contact" style="background-color: var(--primary-color); color: black; border-color: var(--primary-color);">Contact Me</a>
       </div>
     </div>
   </nav>
 </header>
-<main>
 
-<section class="intro-section text-center reveal">
+<main>
+<!-- HERO SECTION -->
+<section id="home" class="intro-section text-center reveal">
   <div class="ava mx-auto my-5">
     <span class="ava-circle me-2"></span> AVAILABLE FOR WORK
   </div>
   <div class="Wilson">
-    <h2>FULL-STACK<br>ENGINEER</h2>
+    <h2>FULL-STACK<br>DEVELOPER</h2>
   </div>
   <div class="description mx-auto">
-    I am Dabelchi Peter Iyiegbu. I blend robust backend architecture with<br>
-    cutting-edge React interfaces to deliver platforms that drive commercial results.
+    I am Dabelchi Peter Iyiegbu. I build responsive, database-driven web applications and scalable platforms that deliver high-quality software solutions.
     <p>
-      <a href="contact.html" class="cta-button mt-4">
+      <a href="#contact" class="cta-button mt-4">
         <i class="fa fa-arrow-circle-right"></i> &nbsp; Schedule a consultation
       </a>
     </p>
   </div>
 </section>
 
-<section class="work-section text-center reveal">
+<hr style="border-color: #333; margin: 0;">
+
+<!-- ABOUT SECTION -->
+<section id="about" class="journey reveal" style="padding: 100px 20px;">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-5">
+        <img src="img/image.png" class="img-fluid rounded shadow-lg" alt="Dabelchi Peter Iyiegbu">
+      </div>
+      <div class="col-md-7 text-start">
+        <div class="journey-title d-inline-flex align-items-center mb-3" style="border: 1px solid white; padding: 6px 15px; border-radius: 40px; font-size: 12px; font-weight: 600;">
+          <span class="ava-circle me-2"></span> THE ARCHITECT
+        </div>
+        <h3 class="journey-title2 mb-4" style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800;">Engineering with <br> Discipline.</h3>
+        <p style="font-size: 1.1rem; line-height: 1.7; color: #6d6060;">
+          I am a Junior Full Stack Developer based in Enugu State, Nigeria. Currently pursuing my BSc in Computer Science at Godfrey Okoye University (expected 2026), my foundation is built on rigorous academics and clean, maintainable code practices.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.7; color: #6d6060;">
+          As an independent contractor since January 2025, I have successfully delivered over 8 tailored web development projects for startup clients. I handle everything from business requirements planning and database design to full deployment using PHP, MySQL, JavaScript, and Bootstrap.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="work-section text-center reveal">
   <div class="work-title mx-auto d-inline-flex align-items-center mb-3">
-    <span class="ava-circle me-2"></span> WHY CHOOSE ME
+    <span class="ava-circle me-2"></span> CORE STRENGTHS
   </div>
   <h2 class="work-title2 mb-5">Why Work With Me</h2>
-
   <div class="container">
     <div class="row g-4 justify-content-center">
       <div class="col-12 col-md-4">
         <div class="work-item h-100">
           <div class="nav-phone"><i class="fa fa-code"></i></div>
-          <h3>Full-Stack Execution</h3>
-          <p>End-to-end development utilizing React, Node.js, and modern APIs.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="work-item h-100">
-          <div class="nav-phone"><i class="fa fa-mobile"></i></div>
-          <h3>Cross-Platform</h3>
-          <p>Architecting and deploying mobile applications to the Apple App Store and Google Play.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="work-item h-100">
-          <div class="nav-phone"><i class="fa fa-credit-card"></i></div>
-          <h3>Commercial Ready</h3>
-          <p>Integrating secure payment gateways like Paystack for automated transactions.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="portfolio-section reveal">
-  <div class="portfolio-title mx-auto d-inline-flex align-items-center mb-3">
-    <span class="ava-circle me-2"></span> COMMERCIAL DEPLOYMENTS
-  </div>
-  <h2 class="portfolio-title2 text-center mb-5">Elevating Brands with <br> Technical Brilliance</h2>
-
-  <div class="container">
-    <div class="row g-4 justify-content-center">
-      
-      <div class="col-12 col-md-6">
-        <div class="gallery">
-          <a href="https://github.com/Dabel04/cookeaze" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <img src="img/laptop1.jpg" class="img-fluid rounded" alt="Cookeaze App">
-            <div class="desc d-flex justify-content-between px-3">
-              <div class="text-start"><strong>Cookeaze</strong><br><small>React Native Mobile App</small></div>
-              <div>You can download it on play store and app store</div>
-              <div>2024</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      
-      <div class="col-12 col-md-6">
-        <div class="gallery">
-          <a href="https://vivisportbrand.fwh.is/auth.php?i=2" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <img src="img/laptop2.jpg" class="img-fluid rounded" alt="44:11 E-commerce">
-            <div class="desc d-flex justify-content-between px-3">
-              <div class="text-start"><strong>44:11</strong><br><small>E-commerce & Paystack API</small></div>
-              <div>2024</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      
-      <div class="col-12 col-md-6">
-        <div class="gallery">
-          <a href="https://github.com/Dabel04/kene-beat-project" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <img src="img/laptop3.jpg" class="img-fluid rounded" alt="KentonTheProducer">
-            <div class="desc d-flex justify-content-between px-3">
-              <div class="text-start"><strong>KentonTheProducer</strong><br><small>Audio Player & Booking Portal</small></div>
-              <div>2023</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      
-      <div class="col-12 col-md-6">
-        <div class="gallery">
-          <a href="https://inspaya.net/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: block;">
-            <img src="img/laptop4.jpg" class="img-fluid rounded" alt="Inspaya.net">
-            <div class="desc d-flex justify-content-between px-3">
-              <div class="text-start"><strong>Inspaya.net</strong><br><small>Web Interface Optimization</small></div>
-              <div>2023</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<section class="portfolio-design reveal">
-  <div class="portfolio-title mx-auto d-inline-flex align-items-center mb-3">
-    <span class="ava-circle me-2"></span> WHAT I OFFER
-  </div>
-  <h2 class="portfolio-title2 text-center mb-5">Engineering Solutions <br> for Scale</h2>
-
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-12 col-md-4">
-        <div class="green p-4 h-100">
-          <div class="nav-phone3"><i class="fa fa-desktop"></i></div>
           <h3>Front-End Design</h3>
-          <p class="piig">Visually stunning, accessible, and responsive React interfaces.</p>
-          <div class="piig2">
-            <p>React & JS (ES6+)</p>
-            <p>Advanced CSS Grid/Flexbox</p>
-          </div>
+          <p>Responsive, user-focused layouts using HTML5, CSS3, Bootstrap 5, and modern JavaScript (ES6+).</p>
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <div class="black p-4 h-100">
-          <div class="nav-phone2"><i class="fa fa-server"></i></div>
-          <h3>Back-End & APIs</h3>
-          <p class="piig">Secure, efficient, and high-performing server architecture.</p>
-          <div class="piig2">
-            <p>Node.js & Databases</p>
-            <p>Payment Gateway Integrations</p>
-          </div>
+        <div class="work-item h-100">
+          <div class="nav-phone"><i class="fa fa-database"></i></div>
+          <h3>Back-End & DB</h3>
+          <p>Secure CRUD applications, authentication systems, and relational databases using PHP and MySQL.</p>
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <div class="white p-4 h-100">
-          <div class="nav-phone4"><i class="fa fa-apple"></i></div>
-          <h3>Mobile Development</h3>
-          <p class="piig">Cross-platform apps published to official marketplaces.</p>
-          <div class="piig2">
-            <p>React Native</p>
-            <p>App Store / Play Store Compliance</p>
-          </div>
+        <div class="work-item h-100">
+          <div class="nav-phone"><i class="fa fa-bug"></i></div>
+          <h3>Clean Code</h3>
+          <p>Committed to object-oriented programming, thorough debugging, and maintainable software practices.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="journey reveal">
+<!-- PROJECTS SECTION -->
+<!-- PROJECTS SECTION -->
+<section id="projects" class="portfolio-section reveal pt-5">
+  <div class="portfolio-title mx-auto d-inline-flex align-items-center mb-3 text-center w-100 justify-content-center">
+    <div style="border: 1px solid white; padding: 6px 15px; border-radius: 40px; font-size: 12px; font-weight: 600; display: inline-flex; align-items: center;">
+      <span class="ava-circle me-2"></span> PROVEN RECORD
+    </div>
+  </div>
+  <h2 class="portfolio-title2 text-center mb-5">Featured Deployments</h2>
   <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-md-6">
-        <img src="img/man7.png" class="img-fluid rounded shadow-lg" alt="Dabelchi Peter Iyiegbu">
-      </div>
-      <div class="col-md-6 text-start">
-        <div class="journey-title d-inline-flex align-items-center mb-3">
-          <span class="ava-circle me-2"></span> THE ENGINEER
+    <div class="row g-5">
+      
+      <!-- New Project 1: Inspaya -->
+      <div class="col-12 col-lg-6">
+        <div class="gallery h-100 d-flex flex-column">
+          <a href="https://inspaya.net" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+            <img src="img/inspaya.png" alt="Inspaya Learning Platform">
+            <div class="desc d-flex flex-column text-start flex-grow-1" style="padding: 30px;">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Inspaya</h3>
+              </div>
+              <p style="color: #ccc; line-height: 1.6; font-size: 1rem; flex-grow: 1;">
+                Led frontend development for an AI-powered platform that curates video courses into structured, certifiable learning paths. Focused on delivering a seamless, responsive UI for automated grading and job matching interfaces.
+              </p>
+              <div class="mt-3">
+                <span class="tech-tag">HTML5 / CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap 5</span>
+              </div>
+            </div>
+          </a>
         </div>
-        <h3 class="journey-title2 mb-4">Dual-Threat <br> Developer</h3>
-        <p style="font-size: 1.1rem; line-height: 1.6;">
-          Hello! I’m Dabelchi Peter Iyiegbu. I am a Full-Stack Software Engineer and Technical Instructor. With a BSc in Computer Science and ongoing postgraduate research in Machine Learning, I don't just write code—I architect solutions.
+      </div>
+
+      <!-- New Project 2: Kuepass -->
+      <div class="col-12 col-lg-6">
+        <div class="gallery h-100 d-flex flex-column">
+          <a href="https://kuepass.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+            <img src="img/kuepass.png" alt="Kuepass Event Management">
+            <div class="desc d-flex flex-column text-start flex-grow-1" style="padding: 30px;">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Kuepass</h3>
+              </div>
+              <p style="color: #ccc; line-height: 1.6; font-size: 1rem; flex-grow: 1;">
+                Executed frontend features for an event management application. Built intuitive vendor dashboards for event creation and streamlined registration flows for attendees to ensure seamless participation across devices.
+              </p>
+              <div class="mt-3">
+                <span class="tech-tag">HTML5 / CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Frontend UI</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Existing Project 1 -->
+      <div class="col-12 col-lg-6">
+        <div class="gallery h-100 d-flex flex-column">
+          <img src="img/laptop3.jpg" alt="E-Commerce Website">
+          <div class="desc d-flex flex-column text-start flex-grow-1" style="padding: 30px;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Full Stack E-Commerce</h3>
+            </div>
+            <p style="color: #ccc; line-height: 1.6; font-size: 1rem; flex-grow: 1;">
+              Developed a complete e-commerce platform supporting product listings, shopping cart functionality, secure user authentication, and database integration. Focused on responsive design and efficient data management.
+            </p>
+            <div class="mt-3">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap 5</span>
+              <span class="tech-tag">JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Existing Project 2 -->
+      <div class="col-12 col-lg-6">
+        <div class="gallery h-100 d-flex flex-column">
+          <img src="img/laptop4.jpg" alt="Music Producer Website">
+          <div class="desc d-flex flex-column text-start flex-grow-1" style="padding: 30px;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Music Producer Site</h3>
+            </div>
+            <p style="color: #ccc; line-height: 1.6; font-size: 1rem; flex-grow: 1;">
+              Designed and developed a professional portfolio website for a music producer featuring a modern interface, responsive layouts, and organized media presentation emphasizing clean visual branding.
+            </p>
+            <div class="mt-3">
+              <span class="tech-tag">HTML5 / CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">PHP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Existing Project 3 -->
+      <div class="col-12 col-lg-6">
+        <div class="gallery h-100 d-flex flex-column">
+          <img src="img/laptop1.jpg" alt="Sportswear E-Commerce">
+          <div class="desc d-flex flex-column text-start flex-grow-1" style="padding: 30px;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Sportswear Platform</h3>
+            </div>
+            <p style="color: #ccc; line-height: 1.6; font-size: 1rem; flex-grow: 1;">
+              Built an online storefront for a sportswear brand with responsive product pages, dynamic shopping functionality, and an intuitive user interface integrated with a robust backend.
+            </p>
+            <div class="mt-3">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Existing Project 4 -->
+      <div class="col-12 col-lg-6">
+        <div class="gallery h-100 d-flex flex-column">
+          <img src="img/laptop2.jpg" alt="User Authentication System">
+          <div class="desc d-flex flex-column text-start flex-grow-1" style="padding: 30px;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 style="font-size: 1.5rem; font-weight: 800; margin: 0;">Secure Auth System</h3>
+            </div>
+            <p style="color: #ccc; line-height: 1.6; font-size: 1rem; flex-grow: 1;">
+              Developed a secure authentication module supporting user registration, login, password validation, session management, and protected user access using robust server-side scripting.
+            </p>
+            <div class="mt-3">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="portfolio-section reveal pt-5" style="background-color: #0a0a0a;">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-12 col-md-5">
+        <div class="d-inline-flex align-items-center mb-3" style="border: 1px solid white; padding: 6px 15px; border-radius: 40px; font-size: 12px; font-weight: 600;">
+          <span class="ava-circle me-2"></span> INITIATE COMMS
+        </div>
+        <h3 class="mb-4 mt-3" style="font-weight: 800; font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1;">Let's Talk <br> Business.</h3>
+        <p class="mb-5" style="color: #aaa; font-size: 1.1rem; line-height: 1.6;">
+          Whether you need a full-stack e-commerce application, a database-driven startup platform, or a responsive website, I am ready to execute. Reach out directly.
         </p>
-        <p style="font-size: 1.1rem; line-height: 1.6;">
-          Whether I'm negotiating master royalties for KentonTheProducer or teaching the next generation of web developers the strict standards of HTML and CSS, I bring an entrepreneurial drive and ruthless execution to every project.
-        </p>
-        <div class="mt-4">
+        <div class="contact-info-item">
+          <i class="fa fa-envelope"></i>
+          <span>iyiegbudabelchi16@gmail.com</span>
+        </div>
+        <div class="contact-info-item">
+          <i class="fa fa-phone"></i>
+          <span>+234 815 524 9290</span>
+        </div>
+        <div class="contact-info-item">
+          <i class="fa fa-map-marker"></i>
+          <span>Enugu State, Nigeria</span>
+        </div>
+        <div class="mt-5">
           <a href="https://github.com/Dabel04" target="_blank" class="media"><i class="fa fa-github"></i></a>
           <a href="#" class="media"><i class="fa fa-linkedin"></i></a>
-          <a href="mailto:iyiegbudabelchi16@gmail.com" class="media"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-7">
+        <div class="contact-card">
+          <form id="contactForm">
+            <div class="row">
+              <div class="col-12 col-md-6 form-group">
+                <label>YOUR NAME</label>
+                <input type="text" id="contactName" placeholder="John Doe">
+                <span id="nameError" class="error-text"></span>
+              </div>
+              <div class="col-12 col-md-6 form-group">
+                <label>EMAIL ADDRESS</label>
+                <input type="email" id="contactEmail" placeholder="john@company.com">
+                <span id="emailError" class="error-text"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>PROJECT DETAILS</label>
+              <textarea id="contactMessage" rows="5" placeholder="Tell me about your business requirements..."></textarea>
+              <span id="messageError" class="error-text"></span>
+            </div>
+            <button type="submit" id="submitBtn" class="cta-button w-100" style="border: none; cursor: pointer; justify-content: center; padding: 15px;">
+              SEND MESSAGE &nbsp; <i class="fa fa-paper-plane"></i>
+            </button>
+            <div id="formStatus" class="mt-3 text-center fw-bold" style="min-height: 20px; color: var(--primary-color);"></div>
+          </form>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 </main>
 
-<footer class="footer text-center mt-5">
+<footer class="footer text-center mt-0" style="background-color: #000; padding: 40px 0;">
   <div class="footer2">
     <h3 style="font-weight: 800;">DABELCHI<span style="color: var(--primary-color);">.</span></h3>
-    <p class="mt-3 text-muted">© <span id="currentYear"></span> All Rights Reserved.</p>
+    <p class="mt-3 text-muted m-0"><span id="currentYear"></span> All Rights Reserved.</p>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
-  // Dynamically set the footer year
+  // Dynamic Footer Year
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-  // Scroll Reveal Animation Logic
+  // Mobile Menu Toggle & Auto-Close on Click
+  const mobileMenuBtn = document.querySelector('.navbar-toggler');
+  const navLinksContainer = document.getElementById('mobileNav');
+  const navItems = document.querySelectorAll('.nav-link');
+  const menuIcon = mobileMenuBtn.querySelector('i');
+
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        let bsCollapse = new bootstrap.Collapse(navLinksContainer, { toggle: false });
+        bsCollapse.hide();
+      }
+    });
+  });
+
+  // Scroll Reveal Logic
   const revealElements = document.querySelectorAll('.reveal');
-
-  const revealOptions = {
-    threshold: 0.15, // Trigger when 15% of the element is visible
-    rootMargin: "0px 0px -50px 0px"
-  };
-
+  const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
   const revealOnScroll = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      
       entry.target.classList.add('active');
-      observer.unobserve(entry.target); // Stop observing once revealed
+      observer.unobserve(entry.target);
     });
   }, revealOptions);
-
   revealElements.forEach(el => revealOnScroll.observe(el));
-</script>
 
+  // Form Validation Logic
+  const contactForm = document.getElementById('contactForm');
+  const nameInput = document.getElementById('contactName');
+  const emailInput = document.getElementById('contactEmail');
+  const messageInput = document.getElementById('contactMessage');
+  const submitBtn = document.getElementById('submitBtn');
+  const formStatus = document.getElementById('formStatus');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let hasError = false;
+
+    if (nameInput.value.trim().length === 0) {
+      document.getElementById('nameError').textContent = "Name is required.";
+      nameInput.classList.add('input-error');
+      hasError = true;
+    }
+    if (emailInput.value.trim().length === 0) {
+      document.getElementById('emailError').textContent = "Email is required.";
+      emailInput.classList.add('input-error');
+      hasError = true;
+    }
+    if (messageInput.value.trim().length === 0) {
+      document.getElementById('messageError').textContent = "Please provide project details.";
+      messageInput.classList.add('input-error');
+      hasError = true;
+    }
+    if (hasError) return;
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "SENDING... <i class='fa fa-spinner fa-spin'></i>";
+    submitBtn.style.backgroundColor = "#555";
+    submitBtn.style.color = "#fff";
+
+    setTimeout(() => {
+      contactForm.reset();
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = "MESSAGE SENT &nbsp; <i class='fa fa-check'></i>";
+      submitBtn.style.backgroundColor = "var(--primary-color)";
+      submitBtn.style.color = "black";
+      formStatus.textContent = "I've received your message. I'll be in touch shortly.";
+      
+      setTimeout(() => {
+         submitBtn.innerHTML = "SEND MESSAGE &nbsp; <i class='fa fa-paper-plane'></i>";
+         formStatus.textContent = "";
+       }, 4000);
+    }, 1500);
+  });
+
+  [nameInput, emailInput, messageInput].forEach(input => {
+    input.addEventListener('input', function() {
+      this.classList.remove('input-error');
+      this.nextElementSibling.textContent = "";
+    });
+  });
+</script>
 </body>
 </html>
